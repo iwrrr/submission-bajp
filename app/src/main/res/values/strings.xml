@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Submission</string>
+
+    <string name="tab_movies">Movies</string>
+    <string name="tab_tv_shows">Tv Shows</string>
+    <string name="poster">Poster</string>
+    <string name="container">Container</string>
+
+    <string name="dummy_overview">Ketika Alita terbangun tanpa ingatan tentang siapa dia di dunia masa depan yang tidak dia kenal, dia ditangkap oleh Ido, seorang dokter yang penuh kasih yang menyadari bahwa di suatu tempat dalam cangkang cyborg yang ditinggalkan ini adalah hati dan jiwa seorang wanita muda dengan luar biasa. lalu.</string>
+    <string name="movie_app">Movie App</string>
+    <string name="duration">Durasi</string>
+    <string name="overview">Kilasan Singkat</string>
+</resources>

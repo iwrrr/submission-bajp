@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.movie.DetailMovieActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/container"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:background="@drawable/bg_container_detail"
+            android:contentDescription="@string/container"
+            android:transitionName="containerTN"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivPoster"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:contentDescription="@string/poster"
+                android:transitionName="posterTN"
+                app:srcCompat="@drawable/poster_alita" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/Typography.Title"
+            android:layout_width="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:transitionName="titleTN"
+            app:layout_constraintEnd_toEndOf="@+id/container"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="@+id/cardView"
+            tools:text="Alita: Battle Angel" />
+
+        <TextView
+            android:id="@+id/tvGenre"
+            style="@style/Typography.Body2"
+            android:layout_width="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:maxLines="2"
+            android:transitionName="genreTN"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            tools:text="Aksi, Cerita Fiksi, Petualangan" />
+
+        <TextView
+            android:id="@+id/tvReleaseDate"
+            style="@style/Typography.Body2"
+            android:layout_marginBottom="4dp"
+            android:transitionName="releaseTN"
+            app:layout_constraintBottom_toBottomOf="@+id/container"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            tools:text="Jul 02, 2021" />
+
+        <TextView
+            android:id="@+id/tvSectionOverview"
+            style="@style/Typography.SectionTitle"
+            android:layout_width="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/overview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvRating" />
+
+        <TextView
+            android:id="@+id/tvOverview"
+            style="@style/Typography.Body1"
+            android:layout_width="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSectionOverview"
+            app:layout_constraintStart_toStartOf="@+id/tvSectionOverview"
+            app:layout_constraintTop_toBottomOf="@+id/tvSectionOverview"
+            tools:text="@string/dummy_overview" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvRating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/navy"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RatingBar
+                    android:id="@+id/rbMovie"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:numStars="1"
+                    android:theme="@style/RatingBar"
+                    android:transitionName="rbTN"
+                    app:layout_constraintEnd_toStartOf="@+id/tvDurationTitle"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:rating="5.0" />
+
+                <TextView
+                    android:id="@+id/tvScore"
+                    style="@style/Typography.Body2"
+                    android:layout_marginBottom="8dp"
+                    android:transitionName="ratingTN"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/rbMovie"
+                    app:layout_constraintStart_toStartOf="@+id/rbMovie"
+                    app:layout_constraintTop_toBottomOf="@+id/rbMovie"
+                    tools:text="5.0" />
+
+                <TextView
+                    android:id="@+id/tvDurationTitle"
+                    style="@style/Typography.Body2"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/duration"
+                    app:layout_constraintBottom_toBottomOf="@+id/rbMovie"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/rbMovie"
+                    app:layout_constraintTop_toTopOf="@+id/rbMovie" />
+
+                <TextView
+                    android:id="@+id/tvDuration"
+                    style="@style/Typography.Body2"
+                    app:layout_constraintEnd_toEndOf="@+id/tvDurationTitle"
+                    app:layout_constraintStart_toStartOf="@+id/tvDurationTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDurationTitle"
+                    tools:text="1h 30m" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
