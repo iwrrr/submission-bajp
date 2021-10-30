@@ -1,8 +1,8 @@
 package com.dicoding.bfaa.submission.ui.movie
 
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Before
-
 import org.junit.Test
 
 class MovieViewModelTest {
@@ -19,11 +19,5 @@ class MovieViewModelTest {
         val movies = viewModel.getMovies()
         assertNotNull(movies)
         assertEquals(10, movies.size)
-    }
-
-    @Test
-    fun getFakeMovies() {
-        val fakeMovies = viewModel.getFakeMovies()
-        assertNull(fakeMovies)
     }
 }

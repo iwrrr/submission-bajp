@@ -1,6 +1,7 @@
 package com.dicoding.bfaa.submission.ui.tvshow
 
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Before
 import org.junit.Test
 
@@ -18,11 +19,5 @@ class TvShowViewModelTest {
         val tvShows = viewModel.getTvShows()
         assertNotNull(tvShows)
         assertEquals(10, tvShows.size)
-    }
-
-    @Test
-    fun getFakeTvShows() {
-        val fakeTvShows = viewModel.getFakeMovies()
-        assertNull(fakeTvShows)
     }
 }
